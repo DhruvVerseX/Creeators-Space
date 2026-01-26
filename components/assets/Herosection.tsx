@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ui/button";
 import { ChevronRight, Plus, Sparkles, MapPin, Wifi } from "lucide-react";
@@ -12,28 +14,28 @@ function Hero() {
     >
       <main className="relative z-10">
         <Navbar />
-        <div className="grid grid-cols-12 gap-8 px-8 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-12 gap-8 px-4 md:px-8 py-10 md:py-20 max-w-7xl mx-auto">
           {/* Left Column */}
 
           <div className="col-span-12 lg:col-span-5 flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 w-fit mb-8 px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20">
+            <div className="inline-flex items-center gap-2 w-fit mb-8 px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 self-center lg:self-start">
               <Sparkles className="w-4 h-4 text-white" />
               <span className="text-white text-sm">
                 Cutting-edge AI trip designs
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight text-balance">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight text-balance text-center lg:text-left">
               Smart & Simple Trip Planning
             </h1>
 
-            <Button className="w-fit bg-blue-700/60 hover:bg-blue-700/80 text-white backdrop-blur-sm border border-white/20 rounded-full px-8 py-6 text-lg">
+            <Button className="w-full sm:w-fit bg-blue-700/60 hover:bg-blue-700/80 text-white backdrop-blur-sm border border-white/20 rounded-full px-8 py-6 text-lg self-center lg:self-start">
               Plan Your Trip <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
 
-          <div className="col-span-12 lg:col-span-7 relative flex items-center justify-end">
+          <div className="col-span-12 lg:col-span-7 relative flex items-center pt-28 justify-center lg:justify-end">
             <div className="w-full md:w-64 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl overflow-hidden">
               <div className="aspect-square bg-linear-to-br from-blue-400 to-teal-600">
                 <Image
@@ -70,7 +72,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-6 px-8 pb-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-12 gap-6 px-4 md:px-8 pb-20 max-w-7xl mx-auto">
           <div className="col-span-12 md:col-span-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6">
             <p className="text-white/60 text-xs mb-4">Sun 09</p>
             <div className="flex items-center justify-between mb-6">
@@ -91,30 +93,30 @@ function Hero() {
             <p className="text-white text-2xl font-bold">$220</p>
           </div>
 
-          <div className="col-span-12 md:col-span-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8">
-            <div className="flex items-center gap-4 bg-white/5 rounded-full px-6 py-4 mb-6">
+          <div className="col-span-12 md:col-span-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 md:gap-4 bg-white/5 rounded-full px-4 md:px-6 py-3 md:py-4 mb-6">
               <Plus className="w-5 h-5 text-white/60" />
               <input
                 type="text"
                 placeholder="Ask Anything..."
-                className="flex-1 bg-transparent text-white placeholder:text-white/50 outline-none"
+                className="flex-1 bg-transparent text-white placeholder:text-white/50 outline-none w-full"
               />
-              <Wifi className="w-5 h-5 text-white/60" />
-              <Sparkles className="w-5 h-5 text-white/60" />
+              <Wifi className="hidden sm:block w-5 h-5 text-white/60" />
+              <Sparkles className="hidden sm:block w-5 h-5 text-white/60" />
               <ChevronRight className="w-5 h-5 text-white/60" />
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full">
-                <Sparkles className="w-4 h-4" />
+              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full w-full sm:w-fit justify-start md:justify-center">
+                <Sparkles className="w-4 h-4 shrink-0" />
                 Inspire me where to go
               </Button>
-              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full">
-                <Plus className="w-4 h-4" />
+              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full w-full sm:w-fit justify-start md:justify-center">
+                <Plus className="w-4 h-4 shrink-0" />
                 Create new Trip
               </Button>
-              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full">
-                <MapPin className="w-4 h-4" />
+              <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 gap-2 rounded-full w-full sm:w-fit justify-start md:justify-center">
+                <MapPin className="w-4 h-4 shrink-0" />
                 Find family hotels in Dubai
               </Button>
             </div>

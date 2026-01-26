@@ -4,5 +4,5 @@ import {prisma} from "@/lib/prisma"
 
 export const { auth, handlers, signIn, signOut } =  NextAuth({
     providers: [],
-    adapter: PrismaAdapter(prisma), 
+    adapter: PrismaAdapter(prisma as any), 
 })
