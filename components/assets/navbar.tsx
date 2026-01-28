@@ -46,13 +46,7 @@ function navbar() {
           <Button className="bg-white text-blue-900 hover:bg-white/90 rounded-full px-4 md:px-6 text-sm md:text-base">
             Sign Up <ChevronRight className="hidden sm:inline w-4 h-4 ml-1" />
           </Button>
-          <Button
-            variant="ghost"
-            className="hidden sm:flex text-white hover:bg-white/10 px-4 text-sm md:text-base"
-            onClick={logout}
-          >
-            Logout
-          </Button>
+
         </div>
       </nav>
     </header>
