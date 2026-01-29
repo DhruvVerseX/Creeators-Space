@@ -7,6 +7,4 @@ export const { auth, handlers, signIn, signOut } =  NextAuth({
     providers: [GitHub],
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     adapter: PrismaAdapter(prisma as any), 
-    trustHost: true,
-    debug: true,
 })
